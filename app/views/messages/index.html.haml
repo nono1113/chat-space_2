@@ -9,13 +9,14 @@
         = @group.name
       %ul.member-list
         = current_user.name
-    .main-header__edit-btn Edit
+    -# .main-header__edit-btn Edit
+    = link_to 'Edit', edit_group_path(@group), class: "main-header__edit-btn"
 
   .messages
     = render @messages
 
   .form
-    = form_for [@group, @message] do |f|
+    = form_for [@group, @message], html:{ class:"msg_form"} do |f|
       = f.text_field :content, class: 'form__message', placeholder: '   type a message'
       .form__mask
         = f.label :image, class: 'form__mask__image' do

@@ -98,6 +98,8 @@ div {
       margin-top: 30px;
       border: solid 1px $blue;
       color: $blue;
+      cursor: pointer;
+      text-decoration: none;
     }
 
     .current-group {
@@ -189,6 +191,7 @@ div {
     &__image {
       font-size: 20px;
       line-height: 50px;
+      cursor: pointer;
     }
 
     .hidden {
@@ -205,5 +208,6 @@ div {
     height: 50px;
     margin-left: 15px;
     padding: 0 30px;
+    cursor: pointer;
   }
 }
