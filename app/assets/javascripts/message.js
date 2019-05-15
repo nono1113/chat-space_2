@@ -35,15 +35,14 @@ $(document).on("turbolinks:load", function () {
         contentType: false
       })
       .done(function (data) {
-        // console.log(data)
         var html = buildHTML(data);
+        var id = document.getElementById('new_message');
+        id.reset();
         $('.messages').append(html);
-        $('.form__message').val('');
         $('.form__submit').prop('disabled', false);
         $('.messages').animate({
           scrollTop: $('.messages')[0].scrollHeight
         }, 'fast');
-
       })
 
       .fail(function () {
