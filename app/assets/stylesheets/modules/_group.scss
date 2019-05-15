@@ -101,10 +101,12 @@
 
       &.chat-group-user__btn--add {
         color: #38aef0;
+        cursor: pointer;
       }
 
       &.chat-group-user__btn--remove {
         color: #f05050;
+        cursor: pointer;
       }
     }
   }
@@ -115,5 +117,6 @@
     color: #fff;
     background-color: #38aef0;
     border: 0;
+    cursor: pointer;
   }
 }
