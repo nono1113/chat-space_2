@@ -2,14 +2,15 @@
 .wrapper
   = render 'side-bar'
 
-.chat-main 
+.chat-main
   .main-header
     .current-group
       %h2.current-group__name
         = @group.name
       %ul.member-list
-        = current_user.name
-    -# .main-header__edit-btn Edit
+        Member:
+        - @group.users.each do |user|
+          = user.name
     = link_to 'Edit', edit_group_path(@group), class: "main-header__edit-btn"
 
   .messages
