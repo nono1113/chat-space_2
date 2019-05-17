@@ -59,7 +59,5 @@ $(document).on("turbolinks:load", function () {
       .fail(function () {
         alert('error');
       })
-
   });
-
 });
