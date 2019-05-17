@@ -41,7 +41,6 @@ $(document).on("turbolinks:load", function () {
 
   $("#group_users").on("keyup", function () {
     var input = $("#group_users").val();
-    // console.log(input)
     $.ajax({
         type: 'GET',
         url: '/users',
@@ -51,7 +50,6 @@ $(document).on("turbolinks:load", function () {
         dataType: 'json'
       })
       .done(function (users) {
-        // console.log(users);
         if (users.length !== 0) {
           users.forEach(function (user) {
             appendUserName(user);
