@@ -1,9 +1,6 @@
 $(document).on("turbolinks:load", function () {
   function buildHTML(message) {
-    var image = ``
-    if (message.image) {
-      var image = `<image class="lower-message__image" src= "${message.image}">`
-    }
+    image = (message.image) ? `<image class="lower-message__image" src= ${message.image}>` : " ";
     var html = `<div class="message">
                   <div class="upper-message">
                     <div class= "upper-message__user-name">
@@ -76,7 +73,7 @@ $(document).on("turbolinks:load", function () {
             }
           })
           .fail(function () {
-            console.log('error');
+            alert('error');
           });
       }
     };
